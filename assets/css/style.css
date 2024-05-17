@@ -184,7 +184,7 @@ box-shadow:0 2px 4px rgba(0, 0, 0, .1) ;
     height: max-content;
     text-align: center;
 }
-.home__img{
+/* .home__img{
     padding-top: 1.3rem;
     padding-left: .8rem;
     width: 160px;
@@ -193,9 +193,10 @@ box-shadow:0 2px 4px rgba(0, 0, 0, .1) ;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: var(--mb-2);
-}
+} */
 .home__img{
     width: 155px;
+    clip-path: circle();
 }
 
 .home__title{
