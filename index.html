@@ -6,6 +6,16 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="./assets/plugins/headlines/headline.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "2LL1VpEWTX9hgoRtT",
+      });
+   })();
+</script>
 
     <title>Portfolio</title>
 </head>
@@ -247,12 +257,12 @@
         <div class="contact__container bd-grid">
             <form action="" class="contact__form">
                 <div class="contact__inputs">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
+                    <input type="text" placeholder="Name" id="name" class="contact__input">
+                    <input type="mail" placeholder="Email" id="email" class="contact__input">
                 </div>
-                <input type="text" placeholder="Project" class="contact__input">
-                <textarea name="" id="" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
-                <input type="submit" value="Send Message" class="button contact__button">
+                <input type="text" placeholder="Project" id="subject" class="contact__input">
+                <textarea name="" id="message" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+                <input type="submit" onclick="sendMail();" value="Send Message" class="button contact__button">
             </form>
             <div class="contact__info">
                 <h3 class="contact_subtitle">Call Me</h3>
