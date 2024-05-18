@@ -35,13 +35,47 @@ function scrollActive() {
   }
 }
 
-function sendMail() {
-  let params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
 
-  emailjs.send("service_lz4qz9f","template_9ykep5m",params).then(alert("sent message!!"))
+
+function check(){
+  // name check
+  // x=document.getElementsByTagName("input");
+  // alpha=/^[A-Za-Z]+$/;
+
+  //   if(x[0].value=="")
+  //     {
+  //       alert("please fill the name");
+  //       return false;
+  //     }
+  //     if(!alpha.test(x[0].value))
+  //       {
+  //         alert("use only alphabets in name");
+  //         return false;
+  //     }
+
+  x=document.getElementsByTagName("input");
+
+  email=/^([A-Za-z0-9_.])+\@([a-z]+\([a-z])+$/;
+
+    if(x[1].value=="")
+      {
+        alert("please fill the email");
+        return false;
+      }
+      if(!email.test(x[1].value))
+        {
+          alert("use only email format");
+          return false;
+      }
+      function sendMail() {
+        let params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value,
+        };
+      
+        emailjs.send("service_lz4qz9f","template_9ykep5m",params).then(alert("sent message!!"))
+      }
 }
+
