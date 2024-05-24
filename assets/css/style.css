@@ -453,6 +453,8 @@ box-shadow:0 2px 4px rgba(0, 0, 0, .1) ;
     border-radius: .5rem;
     margin-top: 10px;
     display: inline-block;
+    /* display: flex; */
+    flex-direction: column;
 
 }
 .works__img{
@@ -487,6 +489,12 @@ box-shadow:0 2px 4px rgba(0, 0, 0, .1) ;
     font-size: var(--h2-font-size);
     color: var(--first-color-lighten);
 }
+.works__title1{
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    display: block;
+}
+
 .works__img:hover .works__data{
     bottom: 0;
 }
